@@ -10,7 +10,15 @@ namespace Examen_2_2.Pages
     public class FormularioModel : PageModel
     {
         [BindProperty]
+        public int Masa { set; get; }
+
+        [BindProperty]
         public int Tamano { get; set; }
+
+        public IActionResult OnPost()
+        {
+            return Page();
+        }
 
         public void OnGet()
         {
