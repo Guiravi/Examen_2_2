@@ -9,6 +9,12 @@ namespace Examen_2_2.Pages
 {
     public class IndexModel : PageModel
     {
+        public IActionResult OnPostEntrarFormulario()
+        {
+            return Redirect("Formulario");
+        }
+
+
         public void OnGet()
         {
 
