@@ -9,6 +9,9 @@ namespace Examen_2_2.Pages
 {
     public class FormularioModel : PageModel
     {
+        [BindProperty]
+        public int Tamano { get; set; }
+
         public void OnGet()
         {
 

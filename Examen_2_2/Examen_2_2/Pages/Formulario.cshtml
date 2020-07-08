@@ -1,8 +1,26 @@
 ﻿@page
 @model Examen_2_2.Pages.FormularioModel
 @{
-    ViewData["Title"] = "Formulario";
+    ViewData["Title"] = "Crear Pizza";
 }
 
-<h2>Formulario</h2>
+<h2>Cree su pizza</h2>
 
+<form method="post">
+    <div class="container">
+        <div class="row">
+            <div class="form-group row text-center" style="padding-right:7%;padding:0; margin:0;" data-toggle="buttons" id="tipoRecomendacion" role="group" aria-label="Recomendacion del artículo">
+                <label class="btn  btn-default">
+                    <input required data-error="Seleccione una recomendacion" type="radio" asp-for="Tamano" value="0"> Pequeña
+                </label>
+                <label class="btn  btn-default">
+                    <input type="radio" asp-for="Tamano" value="1"> Mediana
+                </label>
+                <label class="btn  btn-default">
+                    <input type="radio" asp-for="Tamano" value="2"> Grande
+                </label>
+                <div class="help-block with-errors"> </div>
+            </div>
+        </div>
+    </div>
+</form>
