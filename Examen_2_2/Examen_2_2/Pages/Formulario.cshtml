@@ -7,19 +7,72 @@
 <h2>Cree su pizza</h2>
 
 <form method="post">
-    <div class="container">
-        <div class="row">
-            <div class="form-group row text-center" style="padding-right:7%;padding:0; margin:0;" data-toggle="buttons" id="tipoRecomendacion" role="group" aria-label="Recomendacion del artículo">
-                <label class="btn  btn-default">
-                    <input required data-error="Seleccione una recomendacion" type="radio" asp-for="Tamano" value="0"> Pequeña
-                </label>
-                <label class="btn  btn-default">
-                    <input type="radio" asp-for="Tamano" value="1"> Mediana
-                </label>
-                <label class="btn  btn-default">
-                    <input type="radio" asp-for="Tamano" value="2"> Grande
-                </label>
-                <div class="help-block with-errors"> </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-danger">
+                <div class="panel-heading text-center" style="font-size:15px; font-weight: bold;">
+                    Tamaño
+                </div>
+                <div class="panel-body" style="padding-left:0; padding-right:0;">
+                    <div class="form-group row text-center" style="padding-right:7%;padding:0; margin:0;" data-toggle="buttons" id="tipoTamano" role="group" aria-label="Tipo de tamano">
+                        <label class="btn  btn-default">
+                            <input required data-error="Seleccione una recomendacion" type="radio" asp-for="Tamano" value="0"> Pequeña
+                        </label>
+                        <label class="btn  btn-default">
+                            <input type="radio" asp-for="Tamano" value="1"> Mediana
+                        </label>
+                        <label class="btn  btn-default">
+                            <input type="radio" asp-for="Tamano" value="2"> Grande
+                        </label>
+                        <div class="help-block with-errors"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-danger">
+                <div class="panel-heading text-center" style="font-size:15px; font-weight: bold;">
+                    Tipo de Masa
+                </div>
+                <div class="panel-body" style="padding-left:0; padding-right:0;">
+                    <div class="form-group row text-center" style="padding-right:7%;padding:0; margin:0;" data-toggle="buttons" id="tipoRecomendacion" role="group" aria-label="Recomendacion del artículo">
+                        <label class="btn  btn-default">
+                            <input required data-error="Seleccione una recomendacion" type="radio" asp-for="Masa" value="0"> Artesanal
+                        </label>
+                        <label class="btn  btn-default">
+                            <input type="radio" asp-for="Masa" value="1"> Tradicional
+                        </label>
+                        <label class="btn  btn-default">
+                            <input type="radio" asp-for="Masa" value="2"> Pan Pizza
+                        </label>
+                        <div class="help-block with-errors"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-danger">
+                <div class="panel-heading text-center" style="font-size:15px; font-weight: bold;">
+                    Tipo de Masa
+                </div>
+                <div class="panel-body text-center" style="padding-left:0; padding-right:0;">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info" data-toggle="dropdown" id="dropdown">Seleccionar Ingredientes</button>
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Desplegar</span>
+                        </button>
+                        <ul class="dropdown-menu" id="ingredientesList">
+                            <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="listaTopicosSelec" value="0"> Prueba </li>
+                            <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="listaTopicosSelec" value="1"> Prueba1 </li>
+                            <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="listaTopicosSelec" value="2"> Prueba2 </li>
+                            <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="listaTopicosSelec" value="3"> Prueba3 </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
