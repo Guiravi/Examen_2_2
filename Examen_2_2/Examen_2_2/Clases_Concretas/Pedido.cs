@@ -7,6 +7,8 @@ namespace Examen_2_2.Code
     {
         public List<Comida> ComidaPedido;
 
+        public string Anotaciones;
+
         public Pedido()
         {
             ComidaPedido = new List<Comida>();
@@ -16,6 +18,12 @@ namespace Examen_2_2.Code
         {
             ComidaPedido.Add(comida);
             return comida;
+        }
+
+        public string AddAnotaciones(string anotaciones)
+        {
+            Anotaciones = anotaciones;
+            return Anotaciones;
         }
 
         public double GetPrecio()
