@@ -7,6 +7,17 @@ namespace Examen_2_2.Code
 {
     public abstract class Ingrediente
     {
+        private string Nombre;
+        private double Precio;
 
+        public string GetNombre()
+        {
+            return Nombre;
+        }
+
+        public double GetPrecio()
+        {
+            return Precio;
+        }
     }
 }
