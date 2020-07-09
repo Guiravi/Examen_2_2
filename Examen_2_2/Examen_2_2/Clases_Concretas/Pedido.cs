@@ -7,7 +7,7 @@ namespace Examen_2_2.Code
     {
         public List<Comida> ComidaPedido;
 
-        public string Anotaciones;
+        private string Anotaciones;
 
         public Pedido()
         {
@@ -23,6 +23,11 @@ namespace Examen_2_2.Code
         public string AddAnotaciones(string anotaciones)
         {
             Anotaciones = anotaciones;
+            return Anotaciones;
+        }
+
+        public string GetAnotaciones()
+        {
             return Anotaciones;
         }
 
