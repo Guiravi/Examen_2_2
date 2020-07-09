@@ -25,6 +25,7 @@
                             <input type="radio" asp-for="Tamano" value="2"> Grande
                         </label>
                         <div class="help-block with-errors"> </div>
+                        <span asp-validation-for="Tamano"></span>
                     </div>
                 </div>
             </div>
@@ -46,6 +47,7 @@
                             <input type="radio" asp-for="Masa" value="2"> Pan Pizza
                         </label>
                         <div class="help-block with-errors"> </div>
+                        <span asp-validation-for="Masa"></span>
                     </div>
                 </div>
             </div>
@@ -65,11 +67,12 @@
                         <span class="sr-only">Desplegar</span>
                     </button>
                     <ul class="dropdown-menu" id="ingredientesList">
-                        <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="ListaIngredientesSelec" value="0"> Prueba </li>
-                        <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="ListaIngredientesSelec" value="1"> Prueba1 </li>
-                        <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="ListaIngredientesSelec" value="2"> Prueba2 </li>
-                        <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="ListaIngredientesSelec" value="3"> Prueba3 </li>
+                        @for (int i = 0; i < Model.listaIngredientes.Count; i++)
+                        {
+                            <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="ListaIngredientesSelec" value="@Model.listaIngredientes[i].GetNombre()"> @Model.listaIngredientes[i].GetNombre() </li>
+                        }
                     </ul>
+                    <span asp-validation-for="ListaIngredientesSelec"></span>
                 </div>
             </div>
         </div>
