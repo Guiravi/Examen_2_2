@@ -18,5 +18,11 @@ namespace Examen_2_2.Code
             }
             return precio;
         }
+
+        public Ingrediente AddIngrediente(Ingrediente ingrediente)
+        {
+            Ingredientes.Add(ingrediente);
+            return ingrediente;
+        }
     }
 }
