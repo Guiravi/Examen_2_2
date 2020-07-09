@@ -9,6 +9,8 @@ namespace Examen_2_2.Code
     {
         public List<Ingrediente> Ingredientes;
 
+        public abstract string GetNombre();
+
         public double GetPrecio()
         {
             double precio = 0.0;
