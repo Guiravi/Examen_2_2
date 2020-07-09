@@ -16,13 +16,13 @@
                 <div class="panel-body" style="padding-left:0; padding-right:0;">
                     <div class="form-group row text-center" style="padding-right:7%;padding:0; margin:0;" data-toggle="buttons" id="tipoTamano" role="group" aria-label="Tipo de tamano">
                         <label class="btn  btn-default">
-                            <input required data-error="Seleccione una recomendacion" type="radio" asp-for="Tamano" value="0"> Pequeña
+                            <input required data-error="Seleccione una recomendacion" type="radio" asp-for="Tamano" value="1"> Pequeña
                         </label>
                         <label class="btn  btn-default">
-                            <input type="radio" asp-for="Tamano" value="1"> Mediana
+                            <input type="radio" asp-for="Tamano" value="2"> Mediana
                         </label>
                         <label class="btn  btn-default">
-                            <input type="radio" asp-for="Tamano" value="2"> Grande
+                            <input type="radio" asp-for="Tamano" value="3"> Grande
                         </label>
                         <div class="help-block with-errors"> </div>
                         <span asp-validation-for="Tamano"></span>
@@ -38,13 +38,13 @@
                 <div class="panel-body" style="padding-left:0; padding-right:0;">
                     <div class="form-group row text-center" style="padding-right:7%;padding:0; margin:0;" data-toggle="buttons" id="tipoRecomendacion" role="group" aria-label="Recomendacion del artículo">
                         <label class="btn  btn-default">
-                            <input required data-error="Seleccione una recomendacion" type="radio" asp-for="Masa" value="0"> Artesanal
+                            <input required data-error="Seleccione una recomendacion" type="radio" asp-for="Masa" value="1"> Artesanal
                         </label>
                         <label class="btn  btn-default">
-                            <input type="radio" asp-for="Masa" value="1"> Tradicional
+                            <input type="radio" asp-for="Masa" value="2"> Tradicional
                         </label>
                         <label class="btn  btn-default">
-                            <input type="radio" asp-for="Masa" value="2"> Pan Pizza
+                            <input type="radio" asp-for="Masa" value="3"> Pan Pizza
                         </label>
                         <div class="help-block with-errors"> </div>
                         <span asp-validation-for="Masa"></span>

@@ -66,7 +66,7 @@ namespace Examen_2_2.Pages
         [ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]
         public IActionResult OnPost()
         {
-            if (ListaIngredientesSelec.Count == 0)
+            if (ListaIngredientesSelec.Count == 0 || Masa==0 || Tamano == 0)
             {
                 return Page();
             }
@@ -83,11 +83,11 @@ namespace Examen_2_2.Pages
                 }
             }
             pedido.AddAnotaciones(Anotaciones);
-            if (Tamano == 0)
+            if (Tamano == 1)
             {
                 pedido.ComidaPedido[0].SetTamano("Pequeña");
             }
-            else if (Tamano == 1)
+            else if (Tamano == 2)
             {
                 pedido.ComidaPedido[0].SetTamano("Mediana");
             }
@@ -96,12 +96,12 @@ namespace Examen_2_2.Pages
                 pedido.ComidaPedido[0].SetTamano("Grande");
             }
 
-            if (Masa == 0)
+            if (Masa == 1)
             {
                 MasaArtesanal artesanal = new MasaArtesanal();
                 pedido.ComidaPedido[0].AddIngrediente(artesanal);
             }
-            else if (Masa == 1)
+            else if (Masa == 2)
             {
                 MasaTradicional tradicional = new MasaTradicional();
                 pedido.ComidaPedido[0].AddIngrediente(tradicional);
