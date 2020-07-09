@@ -1,7 +1,7 @@
 ﻿using Examen_2_2.Clases_Abstractas;
 using System.Collections.Generic;
 
-namespace Examen_2_2.Code
+namespace Examen_2_2.Clases_Concretas
 {
     public class Pedido
     {
