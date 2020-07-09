@@ -15,24 +15,27 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+    <style>
+        nav {
+            background-color: darkred;
+        }
+
+        body {
+            background-color: lightgrey;
+        }
+
+        * {
+            color: darkred;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-page="/Index" class="navbar-brand">Examen_2_2</a>
-            </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
+                    <li><a asp-page="/Formulario">Crear Pizza</a></li>
                 </ul>
             </div>
         </div>
@@ -42,9 +45,15 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2020 - Examen_2_2</p>
+        <footer style="position:absolute;bottom:0" class="footer">
+            <hr style="border:none; height: 1px; background-color: lightslategray;" />
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <p>&copy; 2020 - La Cafeteria</p>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 
