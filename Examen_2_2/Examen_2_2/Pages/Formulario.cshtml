@@ -4,7 +4,7 @@
     ViewData["Title"] = "Crear Pizza";
 }
 
-<h2>Cree su pizza</h2>
+<h2 class="text-center" style="padding-top:5%;padding-bottom:5%;font-weight:bolder;">Cree su pizza</h2>
 
 <form method="post">
     <div class="row">
@@ -53,27 +53,36 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-6">
-            <div class="panel panel-danger">
-                <div class="panel-heading text-center" style="font-size:15px; font-weight: bold;">
-                    Tipo de Masa
-                </div>
-                <div class="panel-body text-center" style="padding-left:0; padding-right:0;">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-info" data-toggle="dropdown" id="dropdown">Seleccionar Ingredientes</button>
-                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown">
-                            <span class="caret"></span>
-                            <span class="sr-only">Desplegar</span>
-                        </button>
-                        <ul class="dropdown-menu" id="ingredientesList">
-                            <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="listaTopicosSelec" value="0"> Prueba </li>
-                            <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="listaTopicosSelec" value="1"> Prueba1 </li>
-                            <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="listaTopicosSelec" value="2"> Prueba2 </li>
-                            <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="listaTopicosSelec" value="3"> Prueba3 </li>
-                        </ul>
-                    </div>
+        <div class="panel panel-danger">
+            <div class="panel-heading text-center" style="font-size:15px; font-weight: bold;">
+                Ingredientes
+            </div>
+            <div class="panel-body text-center" style="padding-left:0; padding-right:0;">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info" data-toggle="dropdown" id="dropdown">Seleccionar Ingredientes</button>
+                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown">
+                        <span class="caret"></span>
+                        <span class="sr-only">Desplegar</span>
+                    </button>
+                    <ul class="dropdown-menu" id="ingredientesList">
+                        <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="ListaIngredientesSelec" value="0"> Prueba </li>
+                        <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="ListaIngredientesSelec" value="1"> Prueba1 </li>
+                        <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="ListaIngredientesSelec" value="2"> Prueba2 </li>
+                        <li style="margin: 5px 5px" class="text-primary"><input type="checkbox" name="ListaIngredientesSelec" value="3"> Prueba3 </li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row">
+        <h3>
+            Ingrese sus anotaciones del pedido
+        </h3>
+        <div class="text-center">
+            <textarea placeholder="Agregue sus anotaciones..." cols="100" rows="5" style="border-radius:10px;" asp-for="Anotaciones"></textarea>
+        </div>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit" id="aceptar">Aceptar</button>
     </div>
 </form>
