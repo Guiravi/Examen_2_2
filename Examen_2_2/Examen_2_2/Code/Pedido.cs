@@ -7,5 +7,7 @@ namespace Examen_2_2.Code
 {
     public class Pedido
     {
+        public List<Comida> ComidaPedido;
+
     }
 }
