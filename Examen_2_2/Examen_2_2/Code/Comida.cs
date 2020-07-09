@@ -7,11 +7,16 @@ namespace Examen_2_2.Code
 {
     public abstract class Comida
     {
-        private double Precio;
+        public List<Ingrediente> Ingredientes;
 
         public double GetPrecio()
         {
-            return Precio;
+            double precio = 0.0;
+            for (int i = 0; i < Ingredientes.Count; i++)
+            {
+                precio += Ingredientes[i].GetPrecio();
+            }
+            return precio;
         }
     }
 }
