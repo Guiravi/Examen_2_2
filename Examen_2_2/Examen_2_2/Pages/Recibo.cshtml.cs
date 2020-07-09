@@ -10,7 +10,7 @@ namespace Examen_2_2.Pages
     public class ReciboModel : PageModel
     {
         [BindProperty(SupportsGet = true)]
-        public int Precio { get; set; }
+        public double Precio { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public string TipoComida { get; set; }

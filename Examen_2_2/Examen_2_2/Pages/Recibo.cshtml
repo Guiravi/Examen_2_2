@@ -4,6 +4,17 @@
     ViewData["Title"] = "Recibo";
 }
 
-<h2>Recibo</h2>
+<h2 class="text-center" style="font-weight:bolder;">Recibo</h2>
 
-<h3> @Model. </h3>
+<div class="row">
+    <div class="panel panel-danger">
+        <div class="panel-heading text-center" style="font-size:15px; font-weight: bold;">
+            Especificación del recibo
+        </div>
+        <div class="panel-body text-center" style="padding-left:0; padding-right:0;">
+            <div class="btn-group">
+                <span>@Model.TipoComida : @Model.Precio</span>
+            </div>
+        </div>
+    </div>
+</div>
